@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Wood Mark" />
+    <!-- files css -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" />
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/media.css" />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Wood Mark</title>
+  </head>
+  <body>
+    <div class="home">
+      <!-- Header/Navbar -->
+      <header class="position-relative z-3  ">
+        <nav class="navbar navbar-expand-lg ">
+          <div class="container !d-flex align-items-center">
+            <a class="navbar-brand " href="./index.html">
+              <img
+                src="./assets/images/logo.png"
+                alt="Logo"
+                class="logo rounded-1"
+                width="200"
+              />
+            </a>
+            <button
+              class="navbar-toggler shadow-none border-0"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+            >
+              <i class="fa-solid fa-bars fs-3 text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-white"
+                    aria-current="page"
+                    href="./index.html"
+                    >الرئيسية</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="">من نحن</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white">عن منتجاتنا</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white">المدونة</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./contact.html">تواصل معنا</a>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="d-none d-lg-block">
+              <button class="btn btn-wood text-nowrap">اتصل بنا</button>
+            </div>
+          </div>
+
+          <!-- قائمة جانبية للموبايل -->
+          <div
+            class="offcanvas offcanvas-end d-lg-none"
+            tabindex="-1"
+            id="mobileMenu"
+            aria-labelledby="mobileMenuLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="mobileMenuLabel">القائمة</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column w-100 gap-3">
+              <a class="nav-link active" href="./index.html">الرئيسية</a>
+              <a class="nav-link" href="./assets/about.html">من نحن</a>
+              <a class="nav-link" href="./assets/ourProducts.html">منتجاتنا</a>
+              <a class="nav-link" href="./assets/blog.html">المدونة</a>
+              <a class="nav-link " href="./contact.html">تواصل معنا</a>
+              <div class="">
+                <button class="btn btn-wood text-nowrap">اتصل بنا</button>
+              </div>
+            </div>
+           
+          </div>
+        </nav>
+
+        <div class="overlay"></div>
+      </header>
+
+      <!-- Fullscreen Carousel (behind navbar) -->
+      <div class="hero-slider text-center">
+        <div class="wow hero-slider-content fadeInUp" data-wow-duration="2s">
+          <h1 data-aos-anchor-placement="center-center" class="title-text">
+            <span class="fw-bolder">Wood Mark</span>
+          </h1>
+          <h3>الجودة تلتقي بالأناقة</h3>
+          <p class="px-4 px-md-0">اكتشف تشكيلاتنا المميزة من الباركيه الفاخر التي تناسب جميع الأذواق، بتصاميم عصرية وكلاسيكية تضيف لمسة من الفخامة لمنزلك أو مكتبك</p>
+          <a href="./contact.html" class="btn btn-about mt-3">تواصل معنا</a>
+        </div>
+        <div
+          class="owl-carousel owl-theme position-absolute top-0 start-0 h-100 w-100"
+        >
+          <div class="item">
+            <div class="overlay"></div>
+
+            <img
+              src="./assets/images/3d-rendering-loft-luxury-living-room-with-bookshelf-scaled.jpg"
+              alt="Slider 1"
+              class="object-fit-cover h-100 w-100"
+            />
+          </div>
+          <div class="item">
+            <div class="overlay"></div>
+            <img
+              src="./assets/images/3d-rendering-luxury-modern-living-room-with-leather-sofa-lamp-scaled.jpg"
+              alt="Slider 2"
+              class="object-fit-cover h-100 w-100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- Social Icons -->
+        <div
+        class="social-icon position-fixed start-0 bottom-0 mb-5 ms-3 d-flex flex-column gap-2 z-2 wow fadeInRight"
+        data-wow-duration="1s"
+      >
+        <a
+          href="tel:+201555199540"
+          class="btn d-flex align-items-center justify-content-center rounded-3"
+          style="width: 40px; height: 40px"
+        >
+          <i class="fas fa-phone text-white"></i>
+        </a>
+  
+        <a
+          href="http://wa.me/201555199540"
+          target="_blank"
+          class="btn d-flex align-items-center justify-content-center rounded-3"
+          style="width: 40px; height: 40px"
+        >
+          <i class="fab fa-whatsapp text-white"></i>
+        </a>
+       
+      </div>
+    <!-- js -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

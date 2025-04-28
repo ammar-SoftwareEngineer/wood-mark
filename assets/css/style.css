@@ -1,0 +1,289 @@
+:root {
+  --main-color: #764220;
+  --second-color: #000000;
+  --third-color: #ffffff;
+  --fourth-color: #c04e23;
+  --fifth-color: #17b99e;
+  --six-color: #c6a82c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  /* color: inherit; */
+}
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 1.2rem;
+  background-image: url("../images/bg2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.text-xl {
+  font-size: 8rem;
+}
+.text-lg {
+  font-size: 3rem;
+}
+.text-md {
+  font-size: 2.2rem;
+}
+.text-sm {
+  font-size: 1.5rem;
+}
+
+.btn-wood {
+  background-color: var(--fourth-color);
+  transition: all 0.3s ease-in;
+  color: var(--third-color);
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 17px;
+}
+.btn-wood:hover {
+  background-color: #e45622;
+  color: var(--third-color);
+}
+/* navbar */
+
+header {
+  position: relative;
+  overflow: hidden;
+}
+header .overlay {
+  background: rgba(180, 180, 180, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.navbar {
+  overflow: hidden;
+  z-index: 99;
+}
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+.navbar .nav-link {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+  padding: 8px 12px;
+  display: inline-block;
+  width: fit-content;
+  z-index: 1;
+  overflow: hidden;
+  color: white;
+}
+
+.navbar .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  color: var(--third-color);
+}
+
+.navbar .nav-link:hover::before {
+  opacity: 1;
+}
+
+/* Social icon  */
+
+.social-icon a {
+  background-color: var(--fifth-color) !important;
+  color: var(--third-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+.social-icon a:hover {
+  font-weight: bold;
+  transform: scale(1.11);
+}
+
+/* hero-slide */
+.hero-slider {
+  height: calc(100vh - 102px);
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-slider-pages {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.hero-slider .text-slider {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  z-index: 2 !important;
+  transform: translate(-50%, -50%) !important;
+}
+.hero-slider .text-slider h1 {
+  font-size: 4rem;
+  color: var(--third-color) !important;
+  font-weight: bold !important;
+}
+
+.hero-slider .item {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hero-slider .item img {
+  animation: zoomInOut 5s ease-in-out infinite;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.03);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-slider .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-slider .hero-slider-content {
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  border-radius: 10px;
+  width: 30%;
+  padding: 20px;
+}
+
+.hero-slider .hero-slider-content h1 {
+  color: var(--third-color);
+
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+.hero-slider .hero-slider-content p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+}
+.hero-slider .hero-slider-content .btn-about {
+  background-color: var(--fourth-color);
+  color: var(--third-color);
+  padding: 0.5rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+}
+.hero-slider .hero-slider-content .btn-about:hover {
+  background-color: #e45622;
+}
+.title-text {
+  line-height: 1.6;
+}
+.title-text span:nth-child(1) {
+  font-size: 2.5rem;
+}
+.title-text span:nth-child(2) {
+  font-size: 3.5rem;
+}
+/* Footer  */
+footer .list-links-site li {
+  transition: all 0.3s;
+  cursor: pointer;
+  width: fit-content;
+}
+footer .list-links-site li i {
+  font-size: 15px;
+}
+footer .list-links-site li:hover {
+  color: var(--third-color);
+  transform: translateX(10px);
+}
+
+footer .widget-contact i {
+  background-image: url("../images/wooden-natural-floor-decoration-concept.jpg"); /* نفس الصورة */
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+footer .widget-contact a {
+  transition: all 0.5s ease-in-out;
+}
+footer .widget-contact a :hover {
+  color: var(--third-color);
+}
+
+/* Arabic */
+.social-icon {
+  inset-inline-start: 0;
+  margin-inline-start: 16px;
+}
+
+.contact i {
+  margin-inline-end: 16px;
+}
+footer .list-links-site li i {
+  margin-inline-end: 16px;
+  /* transform: rotate(180deg); */
+}
+footer .widget-contact i {
+  margin-inline-end: 8px;
+}

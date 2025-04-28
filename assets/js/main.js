@@ -1,0 +1,40 @@
+let nav = document.querySelector(".navbar");
+let navLink = document.querySelectorAll(".nav-link");
+let navHeight = nav.offsetHeight;
+window.addEventListener("scroll", function () {
+  let scrollTop = window.scrollY;
+  if (scrollTop > navHeight) {
+    nav.style.cssText =
+      " background-color: #FFF; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);   transition:  0.3s ease-out;  ";
+    nav.classList.add("fixed-top");
+    navLink.forEach((link) => {
+      link.style.color = "#764220";
+    });
+  } else {
+    nav.style.cssText =
+      "background-color: transparent; box-shadow: none; transition:  0.3s ease-in; ";
+    nav.classList.remove("fixed-top");
+   navLink.forEach((link) => {
+      link.style.color = "#ffff ";
+    });
+  }
+});
+
+var owl = $(".owl-carousel");
+owl.owlCarousel({
+  items: 1,
+  loop: true,
+  margin: 100,
+  autoplay: true,
+  rtl: true,
+  nav: false,
+  dots: false,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+});
+$(".play").on("click", function () {
+  owl.trigger("play.owl.autoplay", [1000]);
+});
+$(".stop").on("click", function () {
+  owl.trigger("stop.owl.autoplay");
+});
