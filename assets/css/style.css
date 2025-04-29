@@ -21,7 +21,7 @@ a {
 body {
   font-family: "Cairo", sans-serif;
 
-  background-image: url("../../assets/images/wooden-background.webp");
+  background-image: url("../images/wooden-background.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
