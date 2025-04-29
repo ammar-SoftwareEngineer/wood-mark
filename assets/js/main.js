@@ -38,3 +38,23 @@ $(".play").on("click", function () {
 $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
+
+let started = false; // حتى لا يعيد العد كل مرة
+window.addEventListener('scroll', function() {
+  let counter = document.getElementById('counter');
+  let counterTop = counter.getBoundingClientRect().top;
+
+  if (counterTop < window.innerHeight && !started) {
+    started = true;
+    let count = 0;
+    let target = 1000;
+    let interval = setInterval(() => {
+      count += 10;
+      counter.textContent = count;
+      if (count >= target) {
+        clearInterval(interval);
+        counter.textContent = target; // للتأكيد
+      }
+    }, 20);
+  }
+});
