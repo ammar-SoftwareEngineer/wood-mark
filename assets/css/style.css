@@ -372,7 +372,7 @@ header .overlay {
 .media-entry > a {
   display: block;
   background-color: #000;
-  height: 250px;
+  height: 220px !important;
   object-fit: cover;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
