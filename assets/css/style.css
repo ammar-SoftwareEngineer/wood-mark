@@ -70,7 +70,11 @@ body {
   background-color: #e45622;
   color: var(--third-color);
 }
-
+.bg-filter {
+  background-color: var(--background-color-filter);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+}
 /* navbar */
 header {
   position: relative;
@@ -95,7 +99,6 @@ header .overlay {
   box-shadow: none;
   /* overflow: hidden; */
   z-index: 99;
-  height: 100px;
 }
 
 .navbar-scrolled {
@@ -117,7 +120,6 @@ header .overlay {
   width: fit-content;
   z-index: 1;
   overflow: hidden;
-  color: var(--third-color);
 }
 
 .nav-link::before {
@@ -284,6 +286,50 @@ header .overlay {
 .hero-slider-pages {
   width: 100%;
   height: 100%;
+}
+/* ############################################## */
+/* about */
+.row-about {
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-contact {
+  overflow: hidden;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img-contact::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  z-index: 2;
+  opacity: 0;
+
+  border-radius: 20px;
+  transition: transform 0.35s cubic-bezier(0.05, 0.2, 0.1, 1),
+    opacity 0.35s cubic-bezier(0.05, 0.2, 0.1, 1);
+  transform: scale(0.5);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  /* الضروري لجعل التأثير مرئيًا */
+  border: 12px solid rgba(255, 255, 255, 0.3); /* ظل داكن شفاف */
+}
+
+.row-about:hover .img-contact::after {
+  opacity: 1;
+  transform: scale(0.9);
+}
+.row-about img {
+  transition: all 0.3s ease;
+}
+.row-about:hover img {
+  transform: scale(0.93);
 }
 
 /* ######################################### */
@@ -482,8 +528,6 @@ header .overlay {
   transform: scale(1.05);
 }
 
-
-
 /*--------------------------------------------------------------
 # Blog Details Section
 --------------------------------------------------------------*/
@@ -497,8 +541,6 @@ header .overlay {
 
 .blog-details .article {
   padding: 40px;
-
- 
 }
 
 .blog-details .post-img {
@@ -518,6 +560,37 @@ header .overlay {
   margin-top: 20px;
 }
 
+.blog-details .content blockquote {
+  overflow: hidden;
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  padding: 60px;
+  position: relative;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.blog-details .content blockquote p {
+  color: var(--placeholder-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+  padding: 30px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  background-color: var(--background-color-filter);
+}
+
+.blog-details .content blockquote:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--background-color-filter);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .blog-details .content ol li {
   font-size: 15px;
 }
@@ -656,14 +729,37 @@ header .overlay {
   font-size: 14px;
   color: color-mix(in srgb, var(--third-color), transparent 50%);
 }
-
-
+/* testimonials */
+.testimonials .item img {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.testimonials .item img:hover {
+  transform: scale(1.2);
+}
 
 /* Footer  */
 footer {
   background: var(--background-color-filter);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+}
+footer .widget-logo {
+  width: fit-content;
+}
+footer .bg-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 100px;
+  background-color: rgba(189, 189, 189, 0.445);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: blur(50px);
+  box-shadow: rgba(206, 205, 205, 0.25) 0px 50px 100px -20px,
+    rgba(165, 165, 165, 0.3) 0px 30px 60px -30px;
 }
 footer .list-links-site li {
   transition: all 0.3s;
@@ -675,7 +771,7 @@ footer .list-links-site li i {
   color: var(--fifth-color) !important;
 }
 footer .list-links-site li a {
-  color: var(--third-color);
+  color: var(--placeholder-color);
 }
 footer .list-links-site li a:hover {
   color: var(--fifth-color) !important;

@@ -20,7 +20,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-var owl = $(".owl-carousel");
+var owl = $(".hero");
 owl.owlCarousel({
   items: 1,
   loop: true,
@@ -39,22 +39,58 @@ $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
 
-let started = false; // حتى لا يعيد العد كل مرة
-window.addEventListener('scroll', function() {
-  let counter = document.getElementById('counter');
-  let counterTop = counter.getBoundingClientRect().top;
+var owl = $(".testimonials");
+owl.owlCarousel({
+  responsive: {
+    0: {
+      items: 3,
+    },
+    600: {
+      items: 4,
+ // لا تظهر dots هنا أيضاً
+    },
+    992: {
+      items: 6,
+// تظهر dots في الشاشات الكبيرة فقط
+    },
+    1200: {
+      items: 8,
 
-  if (counterTop < window.innerHeight && !started) {
-    started = true;
-    let count = 0;
-    let target = 1000;
-    let interval = setInterval(() => {
-      count += 10;
-      counter.textContent = count;
-      if (count >= target) {
-        clearInterval(interval);
-        counter.textContent = target; // للتأكيد
-      }
-    }, 20);
-  }
+    },
+  },
+  loop: true,
+  center:true,
+  margin: 40,
+  autoplay: true,
+  rtl: true,
+  nav: false,
+  dots: false,
+  autoplayTimeout: 1500,
+  autoplayHoverPause: true,
 });
+$(".play").on("click", function () {
+  owl.trigger("play.owl.autoplay", [1000]);
+});
+$(".stop").on("click", function () {
+  owl.trigger("stop.owl.autoplay");
+});
+
+// let started = false; // حتى لا يعيد العد كل مرة
+// window.addEventListener('scroll', function() {
+//   let counter = document.getElementById('counter');
+//   let counterTop = counter.getBoundingClientRect().top;
+
+//   if (counterTop < window.innerHeight && !started) {
+//     started = true;
+//     let count = 0;
+//     let target = 1000;
+//     let interval = setInterval(() => {
+//       count += 10;
+//       counter.textContent = count;
+//       if (count >= target) {
+//         clearInterval(interval);
+//         counter.textContent = target; // للتأكيد
+//       }
+//     }, 20);
+//   }
+// });

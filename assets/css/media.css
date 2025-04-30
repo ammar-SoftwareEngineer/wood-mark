@@ -1,110 +1,35 @@
+:root {
+  --main-color: #764220;
+  --second-color: #000000;
+  --third-color: #ffffff;
+  --fourth-color: #c04e23;
+  --fifth-color: #17b99e;
+  --six-color: #c6a82c;
+  --background-color-filter: rgba(180, 180, 180, 0.2);
+  --placeholder-color: #a1a1a1;
+}
 @media (max-width: 992px) {
-  .hero-slider .hero-slider-content h1 {
-    color: var(--third-color);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-  }
-  .hero-slider .hero-slider-content p {
-    line-height: 1.8;
-    font-size: 1.4rem;
-    width: 38rem;
-  }
-  .title-text {
-    line-height: 1.6;
-  }
-  .title-text span:nth-child(1) {
-    font-size: 2.2rem;
-  }
-  .title-text span:nth-child(2) {
-    font-size: 3rem;
-  }
-  .transparent-text {
-    font-size: 35px;
-    font-weight: bold;
-    background-image: url("../images/wooden-natural-floor-decoration-concept.jpg"); /* نفس الصورة */
-    background-size: cover;
-    background-position: center;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  .hero-content h2 {
-    font-size: 40px !important;
+
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+    height: fit-content;
+    display: inline-block;
+    width: fit-content;
+    z-index: 1;
+    overflow: hidden;
+    color: var(--main-color) !important;
   }
 }
 @media (max-width: 768px) {
-  .hero-slider .hero-slider-content {
-    text-align: center;
-    margin: 0;
-  }
-  .hero-slider .hero-slider-content h1 {
-    color: var(--third-color);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-  }
-  .hero-slider .hero-slider-content p {
-    color: var(--third-color);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-size: 1rem;
-    width: 100%;
-  }
-  .hero .owl-nav {
-    display: none;
-  }
-  .title-text {
-    line-height: 1.6;
-  }
-  .title-text span:nth-child(1) {
-    font-size: 1.5rem;
-  }
-  .title-text span:nth-child(2) {
-    font-size: 2.8rem;
-  }
-  .transparent-text {
-    font-size: 30px;
-    font-weight: bold;
-    background-image: url("../images/wooden-natural-floor-decoration-concept.jpg"); /* نفس الصورة */
-    background-size: cover;
-    background-position: center;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  .header-text h2 {
-    font-size: 35px !important;
-  }
-  .hero-slider-pages h1 {
-    text-align: center;
-    font-size: 2.5rem !important;
-    width: 100%;
-  }
-  .hero-content h1 {
-    font-size: 40px;
-  }
+
 }
 
 @media (min-width: 992px) {
-  .owl-dots {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  .transparent-text {
-    font-size: 35px;
-    font-weight: bold;
-    background-image: url("../images/wooden-natural-floor-decoration-concept.jpg"); /* نفس الصورة */
-    background-size: cover;
-    background-position: center;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-  .header-text h2 {
-    font-size: 40px !important;
-  }
 
+.nav-link{
+  color: var(--third-color);
+}
 }
