@@ -1,6 +1,6 @@
 let nav = document.querySelector(".navbar");
 let navLink = document.querySelectorAll(".nav-link");
-let toggleMenu=document.querySelector(".toggle-menu")
+let toggleMenu = document.querySelector(".toggle-menu");
 let navHeight = nav.offsetHeight;
 window.addEventListener("scroll", function () {
   let scrollTop = window.scrollY;
@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
     navLink.forEach((link) => {
       link.style.color = "#764220";
     });
-    toggleMenu.style.color="#764220";
+    toggleMenu.style.color = "#764220";
   } else {
     nav.style.cssText =
       "background-color: transparent; box-shadow: none; transition:  0.3s ease-in; ";
@@ -19,12 +19,12 @@ window.addEventListener("scroll", function () {
     navLink.forEach((link) => {
       link.style.color = "#ffff ";
     });
-    toggleMenu.style.color="#ffff ";
+    toggleMenu.style.color = "#ffffff";
   }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".submenu-toggle-btn").forEach(btn => {
+  document.querySelectorAll(".submenu-toggle-btn").forEach((btn) => {
     btn.onclick = () => {
       const menuItem = btn.closest(".menu-item");
       const submenu = menuItem.querySelector(".sub-menu");
@@ -59,26 +59,24 @@ var owl = $(".testimonials");
 owl.owlCarousel({
   responsive: {
     0: {
-      items: 2,
-      center: true,
+      items: 1,
     },
     600: {
-      items: 4,
+      items: 3,
       // لا تظهر dots هنا أيضاً
     },
     992: {
-      items: 6,
-      center: true,
+      items: 4,
+
       // تظهر dots في الشاشات الكبيرة فقط
     },
     1200: {
-      items: 8,
-      center: true,
+      items: 5,
     },
   },
   loop: true,
-  center: true,
-  margin: 60,
+
+  margin: 20,
   autoplay: true,
   rtl: true,
   nav: false,
