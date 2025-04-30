@@ -75,6 +75,10 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(10px);
 }
+.read-more {
+  width: fit-content;
+  padding: 1px 20px !important;
+}
 /* navbar */
 header {
   position: relative;
