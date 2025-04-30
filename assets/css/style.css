@@ -175,7 +175,13 @@ header .overlay {
   opacity: 1;
   pointer-events: auto;
 }
-
+.sub-menu {
+  display: none;
+  transition: all 0.3s ease;
+}
+.sub-menu.active {
+  display: block;
+}
 .text-slider p {
   max-width: 800px;
   line-height: 1.8;
@@ -200,6 +206,7 @@ header .overlay {
 .hero-slider {
   height: calc(100vh - 102px);
   width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,15 +257,17 @@ header .overlay {
 
 .hero-slider .hero-slider-content {
   position: absolute;
-  top: 35%;
+ 
   z-index: 2;
-
   color: white;
-  background: rgba(0, 0, 0, 0.5);
   transition: all 0.5s;
   border-radius: 10px;
   max-width: 500px;
-  padding: 40px 20px;
+
+
+}
+.hero-slider .hero-slider-content .content {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .hero-slider .hero-slider-content h1 {
@@ -290,6 +299,10 @@ header .overlay {
 .hero-slider-pages {
   width: 100%;
   height: 100%;
+}
+.rotate-down{
+  transition: all 0.3s ease;
+  transform: rotate(-90deg);
 }
 /* ############################################## */
 /* about */
@@ -333,7 +346,7 @@ header .overlay {
   transition: all 0.3s ease;
 }
 .row-about:hover img {
-  transform: scale(0.93);
+  transform: scale(0.9);
 }
 
 /* ######################################### */

@@ -30,48 +30,32 @@
     <div class="home">
       <!-- Header/Navbar -->
       <header class="position-relative z-3">
-        <nav class="navbar navbar-expand-lg d-flex align-items-center z-2">
-          <div class="container">
+        <nav class="navbar navbar-expand-lg z-3">
+          <div class="container !d-flex align-items-center">
             <a class="navbar-brand" href="./index.html">
-              <img
-                src="./assets/images/logo.png"
-                alt="Logo"
-                class="logo rounded-1"
-                width="200"
-                height="auto"
-                loading="lazy"
-              />
+              <img src="./assets/images/logo.png" alt="Logo" class="logo rounded-1" width="200" loading="lazy" />
             </a>
-            <button
-              class="navbar-toggler shadow-none border-0"
-              type="button"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#mobileMenu"
-              aria-controls="mobileMenu"
-            >
-              <i class="fa-solid fa-bars fs-3 text-white"></i>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+              <i class="fa-solid fa-bars fs-3 toggle-menu"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="./index.html"
-                    >الرئيسية</a
-                  >
+                  <a class="nav-link" aria-current="page" href="./index.html">الرئيسية</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./about.html">من نحن</a>
                 </li>
                 <li class="nav-item dropdown position-relative dropdown-show">
-                  <a class="nav-link" href="./products.html"
-                    >منتجاتنا <i class="fa fa-chevron-down fa-xs me-1"></i
-                  ></a>
+                  <a class="nav-link" href="./products.html">منتجاتنا <i class="fa fa-chevron-down fa-xs me-1"></i></a>
                   <ul class="dropdown-menu text-end">
                     <li><a class="dropdown-item" href="#">منتج 1</a></li>
                     <li><a class="dropdown-item" href="#">منتج 2</a></li>
                     <li><a class="dropdown-item" href="#">منتج 3</a></li>
                   </ul>
                 </li>
-
+  
                 <li class="nav-item">
                   <a class="nav-link" href="./blog.html">المدونة</a>
                 </li>
@@ -84,38 +68,39 @@
               <button class="btn btn-wood text-nowrap">اتصل بنا</button>
             </div>
           </div>
-
+  
           <!-- قائمة جانبية للموبايل -->
-          <div
-            class="offcanvas offcanvas-start d-lg-none"
-            tabindex="-1"
-            id="mobileMenu"
-            aria-labelledby="mobileMenuLabel"
-          >
+          <div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title w-100" id="mobileMenuLabel">
                 القائمة
               </h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body d-flex flex-column w-100 gap-3">
-              <a class="nav-link" href="./index.html">الرئيسية</a>
-              <a class="nav-link" href="./assets/about.html">من نحن</a>
-              <a class="nav-link" href="./assets/ourProducts.html">منتجاتنا</a>
-              <a class="nav-link" href="./assets/blog.html">المدونة</a>
-              <a class="nav-link active" href="./contact.html">تواصل معنا</a>
+              <a class="nav-link active" href="./index.html">الرئيسية</a>
+              <a class="nav-link" href="./about.html">من نحن</a>
+              <div class="menu-item has-children rounded">
+                <div class="menu-toggle d-flex justify-content-between align-items-center ">
+                  <a class="nav-link nav-link-text" href="./products.html"> منتجاتنا</a>
+                  <button class="btn submenu-toggle-btn"><i class="fa-solid fa-chevron-left "></i></button> <!-- سهم ▼ -->
+                </div>
+                <ul class="sub-menu list-unstyled px-4 mt-3 ">
+                  <li><a class="nav-link nav-link-text mb-2" href="./products.html">منتج 1</a></li>
+                  <li><a class="nav-link nav-link-text mb-2" href="./products.html">منتج 2</a></li>
+                  <li><a class="nav-link nav-link-text mb-2" href="./products.html" >منتج 3</a></li>
+                </ul>
+              </div>
+  
+              <a class="nav-link" href="./blog.html">المدونة</a>
+              <a class="nav-link" href="./contact.html">تواصل معنا</a>
               <div class="">
                 <button class="btn btn-wood text-nowrap">اتصل بنا</button>
               </div>
             </div>
           </div>
         </nav>
-
+  
         <div class="overlay"></div>
       </header>
       <div class="position-relative text-center text-white py-5">

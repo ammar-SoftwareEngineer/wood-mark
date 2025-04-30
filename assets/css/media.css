@@ -31,6 +31,31 @@
   }
 }
 @media (max-width: 768px) {
+  .hero-slider .hero-slider-content {
+    position: absolute;
+    top:30%;
+    z-index: 2;
+    color: white;
+    transition: all 0.5s;
+    border-radius: 10px;
+    max-width: 500px;
+  
+  
+  }
+  .hero-slider .hero-slider-content h1 {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: bolder;
+  }
+  .hero-slider .hero-slider-content h3 {
+    font-size: 1.3rem;
+
+  }
+ 
+  .hero-slider .hero-slider-content p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -43,5 +68,21 @@
   .img-contact img {
     height: 400px;
     width: 100% !important;
+  }
+  .hero-slider .hero-slider-content {
+    position: absolute;
+    top:35%;
+    z-index: 2;
+    color: white;
+    transition: all 0.5s;
+    border-radius: 10px;
+    max-width: 500px;
+  
+  
+  }
+  .hero-slider .hero-slider-content h1 {
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: bolder;
   }
 }
