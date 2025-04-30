@@ -44,6 +44,7 @@ owl.owlCarousel({
   responsive: {
     0: {
       items: 3,
+      center:true,
     },
     600: {
       items: 4,
@@ -51,29 +52,25 @@ owl.owlCarousel({
     },
     992: {
       items: 6,
+      center:true,
 // تظهر dots في الشاشات الكبيرة فقط
     },
     1200: {
       items: 8,
-
+      center:true,
     },
   },
   loop: true,
   center:true,
-  margin: 40,
+  margin: 60,
   autoplay: true,
   rtl: true,
   nav: false,
   dots: false,
   autoplayTimeout: 1500,
-  autoplayHoverPause: true,
+
 });
-$(".play").on("click", function () {
-  owl.trigger("play.owl.autoplay", [1000]);
-});
-$(".stop").on("click", function () {
-  owl.trigger("stop.owl.autoplay");
-});
+
 
 // let started = false; // حتى لا يعيد العد كل مرة
 // window.addEventListener('scroll', function() {
